@@ -5,6 +5,10 @@ import {combineReducers} from 'redux'
 
 const initState = {
     contents : [
+        {title : 'aaa'},
+        {title : 'aaa'},
+        {title : 'aaa'},
+        {title : 'aaa'},
         {title : 'aaa'}
     ]
 }
