@@ -1,8 +1,10 @@
 
 
 import {combineReducers} from 'redux'
+import {ADD_CONTENT} from '../../actions/actionTypes'
 
 
+const defaultBoard = {title : 'aaa'};
 const initState = {
     contents : [
         {title : 'aaa'},
@@ -16,11 +18,12 @@ const initState = {
 
 
 const contents = function(state = initState.contents, action) {
-
-    // switch(action.type){
-
-    // }
-    return state
+    switch(action.type){
+        case ADD_CONTENT : 
+            return action.contents
+        default : 
+            return state;
+    }
 }
 
 
