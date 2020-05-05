@@ -1,17 +1,17 @@
 
 
 import {combineReducers} from 'redux'
-import {ADD_CONTENT} from '../../actions/actionTypes'
+import {ADD_CONTENT, DEL_CONTENT} from '../../actions/actionTypes'
 
 
 const defaultBoard = {title : 'aaa'};
 const initState = {
     contents : [
-        {title : 'aaa'},
-        {title : 'aaa'},
-        {title : 'aaa'},
-        {title : 'aaa'},
-        {title : 'aaa'}
+        {title : 'aaa1'},
+        {title : 'aaa2'},
+        {title : 'aaa3'},
+        {title : 'aaa4'},
+        {title : 'aaa5'}
     ]
 }
 
@@ -20,6 +20,8 @@ const initState = {
 const contents = function(state = initState.contents, action) {
     switch(action.type){
         case ADD_CONTENT : 
+            return action.contents
+        case DEL_CONTENT: 
             return action.contents
         default : 
             return state;
